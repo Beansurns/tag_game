@@ -16,7 +16,7 @@ class Blocks:
         self.draw()
         
     def draw(self):
-        pygame.draw.rect(screen, self.colour, pygame.rect(self.width, self.height, self.pos))
+        pygame.draw.rect(screen, self.colour, pygame.Rect(self.pos[0], self.pos[1], self.width, self.height))
             
             
             
@@ -34,6 +34,7 @@ while running:
     screen.fill((0,0,0))
     for block in blocks:
         block.update()
+        pygame.display.flip()
             
             
 pygame.quit()
