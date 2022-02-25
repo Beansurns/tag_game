@@ -31,6 +31,14 @@ class Collisions:
 
     def draw(self):
         pygame.Rect(self.pos[0], self.pos[1], self.width, self.height)
+        
+        
+class Player:
+    def __init__(self, p_width=10, p_height=20, p_colour=(100,100,255), p_pos=(500,500)):
+        self.width = p_width
+        self.height = p_height
+        self.colour = p_colour
+        self.pos = p_pos
 
 
 
@@ -78,5 +86,3 @@ while running:
             
             
 pygame.quit()
-    
-
